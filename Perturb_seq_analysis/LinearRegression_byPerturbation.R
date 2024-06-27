@@ -41,3 +41,6 @@ test.table <- lapply(forms, function(x){
 
 #Bind models
 comb.df <- do.call(rbind, test.table) 
+
+#Save
+write.table(comb.df, file = 'LM_byPerturbation.txt', sep = '\t', quote = F, row.names = F) 
