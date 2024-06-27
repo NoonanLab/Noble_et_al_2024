@@ -62,6 +62,9 @@ sum.comb.df <- comb.df %>%
   mutate(comparison = paste0(har,mod)) %>%
   left_join(mod.names, by = c('mod' = 'Var1'))
 
+#Save
+write.table(sum.comb.df, file = 'LM_byGuide.txt', sep = '\t', quote = F, row.names = F) 
+
 
 
 
